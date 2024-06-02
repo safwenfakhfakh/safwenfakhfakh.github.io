@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #003147;
+  --secondary-color: #03a9f4;
+}
+
+body {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 50px;
+  max-width: 1000px;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.25);
+}
+
+.left_side {
+  background: var(--primary-color);
+  padding: 40px;
+}
+
+.left_side .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.about_me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+}
+
+.about_me img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about_me h2,
+.about_me h3 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about_me h2 {
+  font-weight: 600;
+}
+
+.about_me h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.contact_info ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.contact_info ul li .text {
+  color: #fff;
+  font-weight: 300;
+}
+
+.contact_info ul li i {
+  color: var(--secondary-color);
+}
+
+.education li {
+  margin: 10px 0;
+}
+
+.education h4 {
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.education h5 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.education h5.degree {
+  font-weight: 500;
+}
+
+.languages li {
+  margin: 10px 0;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.languages .percent_container {
+  background-color: #081921;
+  height: 6px;
+}
+
+.languages .percent {
+  /* background-color: #081921; */
+  background-color: var(--secondary-color);
+  height: 6px;
+}
+
+.right_side {
+  background: #fff;
+  padding: 40px;
+}
+
+.right_side .title {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+p {
+  color: #333;
+}
+
+.profile {
+  margin-bottom: 40px;
+}
+
+.experience {
+  margin-bottom: 40px;
+}
+
+.experience .box {
+  display: flex;
+  margin: 20px 0;
+}
+
+.year_company {
+  min-width: 150px;
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+
+.box .content h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+}
+
+.skills .percent_container {
+  background-color: #f0f0f0;
+  height: 10px;
+}
+
+.skills .percent {
+  /* background-color: #081921; */
+  background-color: var(--secondary-color);
+  height: 10px;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill h4 {
+  color: #848c90;
+  font-weight: 500;
+}
+
+.interests ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.interests i {
+  color: var(--secondary-color);
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience .box {
+    flex-direction: column;
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about_me {
+  animation: fadeIn 4s;
+}
+
+.skill-2 .percent {
+  animation: fillIn 3s 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fillIn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 80%;
+  }
+}
